@@ -8,3 +8,6 @@
         - ng new my-first-app
         - cd my-first-app
         - ng serve
+    Create Angular Components 
+        - .ts -- contains a class annotated as @Component 
+        - Template or view
