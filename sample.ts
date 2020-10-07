@@ -11,3 +11,4 @@ class Greeter {
   }
   
   let greeter = new Greeter("world");
+  console.log(greeter.greet());

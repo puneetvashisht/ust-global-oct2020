@@ -3,3 +3,8 @@
         - 2. Install some utilities with NPM
         - tsc compiler to convert typescript code into js code.. that run in browser
         - 3. Try and run typescript -- convert it into JS for running on the browser
+    Angular CLI Steps
+        - npm install -g angular-cli
+        - ng new my-first-app
+        - cd my-first-app
+        - ng serve
