@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Ravi",
+      "salary": 34343.33
+    },
+    {
+      "id": 4,
+      "name": "Priya",
+      "salary": 44343.33
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

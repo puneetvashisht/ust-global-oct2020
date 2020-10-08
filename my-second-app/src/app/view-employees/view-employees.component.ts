@@ -18,17 +18,25 @@ export class ViewEmployeesComponent implements OnInit {
   // ]
 
   deleteEmployee(index: number){
-    this.employeeService.employees.splice(index, 1)
+   // this.employeeService.employees.splice(index, 1)
+
+   // AJAX Http delete
+
+  //  this.httpClient.delete('http://localhost:3000/employees/' + index)
+  this.employeeService.deleteEmployee(index)
+   .subscribe(res => console.log(res))
 
   }
 
-  constructor(public employeeService: EmployeeService, public httpClient: HttpClient) { }
+  constructor(public employeeService: EmployeeService, ) { }
 
   ngOnInit(): void {
 
     //Right place for http calls on component load
     // this.httpClient.get('http://localhost:4200/assets/employees_dummy.json')
-    this.httpClient.get('https://jsonplaceholder.typicode.com/users')    
+    // this.httpClient.get('https://jsonplaceholder.typicode.com/users')    
+    // this.httpClient.get('http://localhost:3000/employees')  
+    this.employeeService.fetchAllEmployees()
     .subscribe((res:any)=>
       {
         console.log(res)

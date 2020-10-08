@@ -13,3 +13,12 @@
         - Template or view
     CRUD
         - Components to create, read, update and delete an entity - Employee
+        - Http communication using GET, POST, DELETE
+        - JSON Web SErver
+            - npm init - create a package.json
+            - npm i json-server - creates a dependency in package.json
+            - db.json 
+            - json-server --watch db.json
+            https://www.npmjs.com/package/json-server
+        - Create component: ng generate component <component-name> : ng g c
+        - Create service: ng generate service <service-name> : ng g s
