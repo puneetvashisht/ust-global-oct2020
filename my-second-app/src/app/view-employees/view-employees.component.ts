@@ -27,7 +27,8 @@ export class ViewEmployeesComponent implements OnInit {
   ngOnInit(): void {
 
     //Right place for http calls on component load
-    this.httpClient.get('http://localhost:4200/assets/employees_dummy.json')
+    // this.httpClient.get('http://localhost:4200/assets/employees_dummy.json')
+    this.httpClient.get('https://jsonplaceholder.typicode.com/users')    
     .subscribe((res:any)=>
       {
         console.log(res)
