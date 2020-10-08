@@ -11,3 +11,5 @@
     Create Angular Components 
         - .ts -- contains a class annotated as @Component 
         - Template or view
+    CRUD
+        - Components to create, read, update and delete an entity - Employee
