@@ -9,6 +9,11 @@
       "id": 4,
       "name": "Priya",
       "salary": 44343.33
+    },
+    {
+      "id": "23",
+      "name": "Saranya",
+      "salary": "232433"
     }
   ],
   "posts": [
