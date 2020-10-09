@@ -28,3 +28,4 @@
         - Pass values from child to parent () - event binding
     Single Page Application
         - How to it in Angular
+        - Routing Module, Define Path for pages, Linking

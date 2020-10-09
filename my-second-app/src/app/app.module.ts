@@ -10,6 +10,14 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { CardComponent } from './card/card.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const routes: Routes = [
+  {path:'', component: ViewEmployeesComponent},
+  {path:'add', component: AddEmployeeComponent},
+  {path:'courses', component: ViewCoursesComponent}
+]
 
 @NgModule({
   declarations: [
@@ -23,7 +31,8 @@ import { CardComponent } from './card/card.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
