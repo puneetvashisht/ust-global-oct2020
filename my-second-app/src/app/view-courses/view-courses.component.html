@@ -3,15 +3,14 @@
 </ul> -->
 
 <div class="container">
+    <div>
+        Total Courses Enrolled: {{totalEnrolled}} 
+    </div>
+
+    <hr/>
+
     <div class="row">
-        <div class="card" style="width: 18rem;" *ngFor="let course of courses">
-            <img src="../../assets/saanvi.png" class="card-img-top" alt="Some Image"/>
-            <div class="card-body">
-              <h5 class="card-title">{{course.title}}</h5>
-              <p class="card-text">{{course.summary}}</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+      <app-card *ngFor="let course of courses" [title]="course.title" [summary]="course.summary" (userEnrolled)="handleUserEnrolled($event)"></app-card>
     </div>
 </div>
 

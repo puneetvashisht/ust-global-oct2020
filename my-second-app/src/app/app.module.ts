@@ -9,6 +9,7 @@ import { ViewEmployeesComponent } from './view-employees/view-employees.componen
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ChildComponent } from './child/child.component';
     ViewEmployeesComponent,
     AddEmployeeComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

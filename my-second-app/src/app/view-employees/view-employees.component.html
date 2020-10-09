@@ -19,4 +19,7 @@
       </tr>
      
     </tbody>
+
+    <app-card *ngFor="let employee of employeeService.employees;" [title]="employee.name" [summary]="employee.salary"></app-card>
+
   </table>

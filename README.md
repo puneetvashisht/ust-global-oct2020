@@ -25,5 +25,6 @@
     Nested Component 
         - Parent and child components
         - Pass values from parent to child using  [] - property binding
+        - Pass values from child to parent () - event binding
     Single Page Application
         - How to it in Angular

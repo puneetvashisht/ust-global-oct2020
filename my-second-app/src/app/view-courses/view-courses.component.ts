@@ -9,6 +9,7 @@ import { Course } from './Course';
 export class ViewCoursesComponent implements OnInit {
 
   // course: String = 'Angular'
+  totalEnrolled: number = 0;
 
   // courses: Array<String> = ['Angular', 'Java', 'Spring', 'Git', 'MongoDB'];
 
@@ -19,6 +20,11 @@ export class ViewCoursesComponent implements OnInit {
     {title: 'Git', summary: 'Source Code Management!!'},
     {title: 'MongoDB', summary: 'NoSQL db'}
   ]
+
+  handleUserEnrolled(i: number){
+    console.log('In the parent component', i)
+    this.totalEnrolled +=i;
+  }
 
   constructor() { }
 
