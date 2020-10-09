@@ -13,13 +13,23 @@
       <tr *ngFor="let employee of employeeService.employees; index as i;">
         <th scope="row">{{i + 1}}</th>
         <td>{{employee.id}}</td>
-        <td>{{employee.name}}</td>
+        <td><a [routerLink]="['/details', employee.id]">{{employee.name}}</a></td>
         <td>{{employee.salary}}</td>
         <td><button type="button" class="btn btn-danger" (click)="deleteEmployee(employee.id)"> X </button></td>
       </tr>
      
     </tbody>
 
-    <app-card *ngFor="let employee of employeeService.employees;" [title]="employee.name" [summary]="employee.salary"></app-card>
+   
 
   </table>
+
+ <hr/>
+
+ <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Search Id</span>
+  </div>
+  <input type="number" #id class="form-control" placeholder="Enter a valid id" aria-label="Username" aria-describedby="basic-addon1">
+  <button class="btn btn-primary" (click)="searchEmployee(id.value)">Search</button>
+</div>

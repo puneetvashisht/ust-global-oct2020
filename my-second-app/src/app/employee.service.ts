@@ -24,6 +24,10 @@ export class EmployeeService {
     return this.httpClient.get(baseUrl);
   }
 
+  fetchEmployee(id: string){
+    return this.httpClient.get(baseUrl + id);
+  }
+
   public employees : Array<Employee> = []
 
   

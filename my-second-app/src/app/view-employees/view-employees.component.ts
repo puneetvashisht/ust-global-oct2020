@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeeService } from '../employee.service';
 import { Employee } from './Employee';
 
@@ -17,6 +18,12 @@ export class ViewEmployeesComponent implements OnInit {
   //   {id: 34, name:'Samaira', salary: 24343.33}
   // ]
 
+  searchEmployee(id: number){
+    console.log(id);
+    this.router.navigate(['details', id]);
+
+  }
+
   deleteEmployee(index: number){
    // this.employeeService.employees.splice(index, 1)
 
@@ -28,7 +35,7 @@ export class ViewEmployeesComponent implements OnInit {
 
   }
 
-  constructor(public employeeService: EmployeeService, ) { }
+  constructor(public employeeService: EmployeeService, private router: Router) { }
 
   ngOnInit(): void {
 

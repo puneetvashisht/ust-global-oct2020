@@ -11,12 +11,16 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { CardComponent } from './card/card.component';
 import { RouterModule, Routes } from '@angular/router';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
   {path:'', component: ViewEmployeesComponent},
   {path:'add', component: AddEmployeeComponent},
-  {path:'courses', component: ViewCoursesComponent}
+  {path:'courses', component: ViewCoursesComponent},
+  {path:'details/:id', component: EmployeeDetailsComponent},
+  {path:'**', component: NotFoundComponent},
 ]
 
 @NgModule({
@@ -27,7 +31,8 @@ const routes: Routes = [
     AddEmployeeComponent,
     ParentComponent,
     ChildComponent,
-    CardComponent
+    CardComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
