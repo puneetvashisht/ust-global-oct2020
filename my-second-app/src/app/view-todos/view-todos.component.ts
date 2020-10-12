@@ -11,6 +11,8 @@ import { TodoService } from '../todo.service';
 export class ViewTodosComponent implements OnInit {
 
   todos: Array<Todo>= []
+  today:Date =  new Date();
+  stringArray: Array<string> = ['JAN', 'Feb', 'March']
 
   constructor(private todoService: TodoService) { }
 

@@ -15,6 +15,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ViewTodosComponent } from './view-todos/view-todos.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
+import { SentenceCasePipe } from './sentence-case.pipe';
+import { SearchTextPipe } from './search-text.pipe';
 
 
 const routes: Routes = [
@@ -38,7 +40,9 @@ const routes: Routes = [
     CardComponent,
     EmployeeDetailsComponent,
     ViewTodosComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    SentenceCasePipe,
+    SearchTextPipe
   ],
   imports: [
     BrowserModule,

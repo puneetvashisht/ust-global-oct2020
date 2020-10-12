@@ -36,4 +36,6 @@
     Services
         - Dependency Injection
         - Http alternatives
+    Pipes
+        - Formating/Filtering your data
     Form Validation

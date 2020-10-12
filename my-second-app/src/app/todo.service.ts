@@ -36,4 +36,12 @@ export class TodoService {
     return observable;
   }
 
+
+  // delete(index){
+  //   let todoArray = JSON.parse(localStorage.getItem('mytodo')) || []
+  //   // todoArray.push(todo)
+  //   todoArray.splice(index, 1);
+  //   localStorage.setItem('mytodo', JSON.stringify(todoArray));
+  // }
+
 }
