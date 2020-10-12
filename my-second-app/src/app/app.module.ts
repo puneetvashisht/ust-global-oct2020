@@ -13,13 +13,17 @@ import { CardComponent } from './card/card.component';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ViewTodosComponent } from './view-todos/view-todos.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 
 const routes: Routes = [
-  {path:'', component: ViewEmployeesComponent},
-  {path:'add', component: AddEmployeeComponent},
-  {path:'courses', component: ViewCoursesComponent},
-  {path:'details/:id', component: EmployeeDetailsComponent},
+  // {path:'', component: ViewEmployeesComponent},
+  // {path:'add', component: AddEmployeeComponent},
+  // {path:'courses', component: ViewCoursesComponent},
+  // {path:'details/:id', component: EmployeeDetailsComponent},
+  {path: '', component: ViewTodosComponent},
+  {path: 'add', component: AddTodoComponent},
   {path:'**', component: NotFoundComponent},
 ]
 
@@ -32,7 +36,9 @@ const routes: Routes = [
     ParentComponent,
     ChildComponent,
     CardComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    ViewTodosComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,

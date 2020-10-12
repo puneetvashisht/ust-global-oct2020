@@ -1,4 +1,18 @@
 {
+  "todos": [
+    {
+      "id": 0,
+      "text": "Buy milk"
+    },
+    {
+      "id": 1,
+      "text": "Go jogging"
+    },
+    {
+      "text": "test",
+      "id": 2
+    }
+  ],
   "employees": [
     {
       "id": 1,
