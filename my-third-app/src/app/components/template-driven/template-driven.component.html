@@ -1,1 +1,4 @@
-<p>template-driven works!</p>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+<input type="text" [(ngModel)]="favoriteColor" name="favoriteColor" required pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+<button type="submit" [disabled]="!f.valid">Submit</button>
+</form>

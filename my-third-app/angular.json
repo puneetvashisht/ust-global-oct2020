@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "my-third-app"
+  "defaultProject": "my-third-app",
+  "cli": {
+    "analytics": false
+  }
 }
