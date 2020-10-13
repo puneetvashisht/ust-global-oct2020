@@ -39,3 +39,10 @@
     Pipes
         - Formating/Filtering your data
     Form Validation
+        - Reactive/Data-driven form validation
+            - Import ReactiveFormsModule
+            - FormGroups -> FormControl in both template and ts
+            - Validators or custom validations
+        - Template-Driven
+    Angular Material 
+        - Already built in components

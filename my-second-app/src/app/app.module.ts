@@ -13,11 +13,16 @@ import { CardComponent } from './card/card.component';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ViewTodosComponent } from './view-todos/view-todos.component';
+import { PizzaPartyComponent, ViewTodosComponent } from './view-todos/view-todos.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { SentenceCasePipe } from './sentence-case.pipe';
 import { SearchTextPipe } from './search-text.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSliderModule } from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const routes: Routes = [
   // {path:'', component: ViewEmployeesComponent},
@@ -39,6 +44,7 @@ const routes: Routes = [
     ChildComponent,
     CardComponent,
     EmployeeDetailsComponent,
+    PizzaPartyComponent,
     ViewTodosComponent,
     AddTodoComponent,
     SentenceCasePipe,
@@ -47,7 +53,14 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+
+
+    MatSliderModule,
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

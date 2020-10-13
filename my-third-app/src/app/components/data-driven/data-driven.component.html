@@ -1,0 +1,27 @@
+<form [formGroup]="signUpForm" (submit)="onSignup()">
+    <mat-form-field>
+      <input matInput  formControlName="email"  type="email" placeholder="E-Mail*">
+      <mat-error *ngIf="signUpForm.get('email').invalid">Please enter a valid email.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  formControlName="password"  type="password" placeholder="Password*">
+     
+      <mat-error *ngIf="signUpForm.get('password').invalid">Please enter a valid password (Minimum 6 characters).</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput  formControlName="cpassword"  type="password" placeholder="Confirm Password*">
+       
+        
+      </mat-form-field>
+      <mat-error *ngIf="signUpForm.errors?.confirmedValidator && (signUpForm.get('cpassword').touched || signUpForm.get('cpassword').dirty)" class="cross-validation-error-message alert alert-danger">
+        <small>Passwords don't match.</small>
+      </mat-error>
+
+    <button mat-button type="submit" color="primary"  [disabled]="!signUpForm.valid">Signup</button>
+
+
+   
+  </form>
+
+

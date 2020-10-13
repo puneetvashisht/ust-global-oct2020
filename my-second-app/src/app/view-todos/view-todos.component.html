@@ -19,5 +19,5 @@
     <input #search (keyup)="0" type="text" class="form-control" placeholder="Search for todo" />
   </div>
 <ul class="list-group list-group-flush" >
-    <li class="list-group-item" *ngFor="let todo of todos | searchText:search.value"> {{todo.text}}</li>
+    <li class="list-group-item"  *ngFor="let todo of todos | searchText:search.value"> <span [ngClass]="{red: todo.done}">{{todo.text}}</span></li>
 </ul>
