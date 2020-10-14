@@ -57,5 +57,5 @@
     1. View All Posts (Table of all posts - link for detailed) - Search on posts --> filters
     2. Detailed view of a post -- showing all comments
     3.  Add Post  - Form validations
-    4.  
+    4. Comments can be added from Detailed view screen
     Design is Angular Material -- fallback using Angular Bootstrap
