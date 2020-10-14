@@ -46,3 +46,10 @@
         - Template-Driven
     Angular Material 
         - Already built in components
+    Angular Build
+        - ng build [--prod]
+        - Angular build process is different from Java
+        - Angular CLI depends on Webpack(bundler) to create build
+
+    -- Coding Assignment
+    Discussion forum (Post -> Comments*) 
