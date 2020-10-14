@@ -52,4 +52,10 @@
         - Angular CLI depends on Webpack(bundler) to create build
 
     -- Coding Assignment
-    Discussion forum (Post -> Comments*) 
+    Discussion forum (Post -> Comments*) as Single Page Application
+    Use JSON Server as backend simulation
+    1. View All Posts (Table of all posts - link for detailed) - Search on posts --> filters
+    2. Detailed view of a post -- showing all comments
+    3.  Add Post  - Form validations
+    4.  
+    Design is Angular Material -- fallback using Angular Bootstrap
