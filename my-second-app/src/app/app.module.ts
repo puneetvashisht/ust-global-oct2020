@@ -28,8 +28,9 @@ import { SortSalaryPipe } from './sort-salary.pipe';
 import { SurveyModule } from './survey/survey.module';
 
 const routes: Routes = [
-  {path:'', component: ViewEmployeesComponent},
-  {path:'add', component: AddEmployeeComponent},
+  { path: '', pathMatch: 'full', redirectTo: '/viewemployee' },
+  {path:'viewemployee', component: ViewEmployeesComponent},
+  {path:'addemployee', component: AddEmployeeComponent},
   {path:'courses', component: ViewCoursesComponent},
   {path:'details/:id', component: EmployeeDetailsComponent},
   {
@@ -76,6 +77,7 @@ const routes: Routes = [
 
    
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
