@@ -23,15 +23,16 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SearchNamePipe } from './search-name.pipe';
 
 const routes: Routes = [
-  // {path:'', component: ViewEmployeesComponent},
-  // {path:'add', component: AddEmployeeComponent},
-  // {path:'courses', component: ViewCoursesComponent},
-  // {path:'details/:id', component: EmployeeDetailsComponent},
-  {path: '', component: ViewTodosComponent},
-  {path: 'add', component: AddTodoComponent},
-  {path:'**', component: NotFoundComponent},
+  {path:'', component: ViewEmployeesComponent},
+  {path:'add', component: AddEmployeeComponent},
+  {path:'courses', component: ViewCoursesComponent},
+  {path:'details/:id', component: EmployeeDetailsComponent}
+  // {path: '', component: ViewTodosComponent},
+  // {path: 'add', component: AddTodoComponent},
+  // {path:'**', component: NotFoundComponent},
 ]
 
 @NgModule({
@@ -48,7 +49,8 @@ const routes: Routes = [
     ViewTodosComponent,
     AddTodoComponent,
     SentenceCasePipe,
-    SearchTextPipe
+    SearchTextPipe,
+    SearchNamePipe
   ],
   imports: [
     BrowserModule,
