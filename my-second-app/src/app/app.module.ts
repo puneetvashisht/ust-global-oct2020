@@ -24,6 +24,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { SearchNamePipe } from './search-name.pipe';
+import { SortSalaryPipe } from './sort-salary.pipe';
 
 const routes: Routes = [
   {path:'', component: ViewEmployeesComponent},
@@ -50,7 +51,8 @@ const routes: Routes = [
     AddTodoComponent,
     SentenceCasePipe,
     SearchTextPipe,
-    SearchNamePipe
+    SearchNamePipe,
+    SortSalaryPipe
   ],
   imports: [
     BrowserModule,
