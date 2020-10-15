@@ -9,6 +9,7 @@ export class SortSalaryPipe implements PipeTransform {
 
   transform(employees: Array<Employee>, ...args: number[]): Array<Employee> {
     let sortedEmployees = []
+    console.log(args);
     if(args[0] < 0){
       sortedEmployees = employees.sort((e1, e2)=> e2.salary - e1.salary);
     }

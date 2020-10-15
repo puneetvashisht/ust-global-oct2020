@@ -25,15 +25,21 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { SearchNamePipe } from './search-name.pipe';
 import { SortSalaryPipe } from './sort-salary.pipe';
+import { SurveyModule } from './survey/survey.module';
 
 const routes: Routes = [
   {path:'', component: ViewEmployeesComponent},
   {path:'add', component: AddEmployeeComponent},
   {path:'courses', component: ViewCoursesComponent},
-  {path:'details/:id', component: EmployeeDetailsComponent}
+  {path:'details/:id', component: EmployeeDetailsComponent},
+  {
+    path: 'survey',
+    loadChildren: () => import('./survey/survey.module').then(m => m.SurveyModule)
+  },
   // {path: '', component: ViewTodosComponent},
   // {path: 'add', component: AddTodoComponent},
   // {path:'**', component: NotFoundComponent},
+
 ]
 
 @NgModule({
@@ -57,6 +63,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    SurveyModule,
+
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
 
@@ -65,6 +73,8 @@ const routes: Routes = [
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule
+
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
