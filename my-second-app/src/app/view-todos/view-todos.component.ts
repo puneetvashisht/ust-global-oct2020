@@ -37,11 +37,15 @@ export class ViewTodosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    //Component code 
+
+
+    // Service call
     this.todoService.fetchAllTodos()
     .subscribe((res: Array<Todo>)=> {
       console.log('In subscribe ', res);
         this.todos = res;
-
     })
   
   }

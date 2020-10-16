@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class TemplateDrivenComponent implements OnInit {
 
+  condition: Boolean= true;
+  
   favoriteColor = '';
 
   constructor() { }
@@ -21,3 +23,6 @@ export class TemplateDrivenComponent implements OnInit {
   }
 
 }
+
+//object
+// new TemplateDrivenComponent()

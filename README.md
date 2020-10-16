@@ -24,7 +24,11 @@
         - Create service: ng generate service <service-name> : ng g s
     Nested Component 
         - Parent and child components
-        - Pass values from parent to child using  [] - property binding
+        - Pass values from parent to child using  
+        {{}} - Interpolation - reading from .ts to html
+        [] - property binding - input
+        () - Event binding - outputs
+        [(ngModel)] - two way binding
         - Pass values from child to parent () - event binding
     Single Page Application
         - How to it in Angular
@@ -59,5 +63,13 @@
     3.  Add Post  - Form validations
     4. Comments can be added from Detailed view screen
     Design is Angular Material -- fallback using Angular Bootstrap
+
+    Testing
+        - Unit Testing
+        - Jasmine/Mocha testing library
+        - Write .spec test case
+        - Test runner - karma
+        - Configuration file for karma
+
 
     

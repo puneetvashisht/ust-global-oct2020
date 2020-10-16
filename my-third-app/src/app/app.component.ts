@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-third-app';
+
+
+  isOn = false;
+  clicked() { this.isOn = !this.isOn; }
+  get message() { return `The light is ${this.isOn ? 'On' : 'Off'}`; }
 }
