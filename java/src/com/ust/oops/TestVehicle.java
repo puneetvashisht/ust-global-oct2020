@@ -1,4 +1,4 @@
-package com.ust;
+package com.ust.oops;
 
 public class TestVehicle {
 
