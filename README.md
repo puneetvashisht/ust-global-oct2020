@@ -72,4 +72,22 @@
         - Configuration file for karma
 
 
+    -------------------- JAVA -----------------------
+    Eclipse setup
+    Java OOPS
+        1. Inheritance
+            a. Code Reuse
+            b. Polymorphism
+        2. Polymorphism
+    Casting 
+        Upcasting is default, downcast is explicitly needed
+        a. Primitives
+        b. Reference types - supertypes can hold subtypes objects, explicit cast needed.
+
+    LSP - Liskov's Substitution Principle
+    Car is a Vehicle
+    Department is an Employee
+    Manager is a Employee
+    3D is a 2D --  (favour composition over inheritance)
+
     
