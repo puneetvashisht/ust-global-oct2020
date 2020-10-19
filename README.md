@@ -90,4 +90,6 @@
     Manager is a Employee
     3D is a 2D --  (favour composition over inheritance)
 
+    Bicycle (maxSpeed) -> RoadBicyle (speedUp-> speed +2 ) & MountainBycle (speedUp-> speed +1)
+
     
