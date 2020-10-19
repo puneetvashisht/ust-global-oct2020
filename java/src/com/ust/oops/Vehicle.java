@@ -1,8 +1,10 @@
 package com.ust.oops;
 
-public class Vehicle extends Object{
+public abstract class Vehicle extends Object{
 	//state/fields
-	private int speed;
+	int speed;
+	
+	Engine engine;
 	
 	//Constructor
 	public Vehicle(int speed){
@@ -11,7 +13,21 @@ public class Vehicle extends Object{
 		}	
 	}
 	
+	public Vehicle(int speed, Engine engine){
+		if(speed>=0){
+			this.speed = speed;
+		}	
+		this.engine = engine;
+	}
 	
+	
+	public  void start(){
+		// start plane engine
+				System.out.println(this.engine);
+				// print plane properties
+				System.out.println(this);
+				
+	}
 	
 	public int getSpeed() {
 		return speed;
@@ -38,6 +54,8 @@ public class Vehicle extends Object{
 	public String toString() {
 		return "Vehicle [speed=" + speed + "]";
 	}
+	
+	
 	
 //	 public String toString() {
 //	        return "Vehicle with speed: " + this.speed; 

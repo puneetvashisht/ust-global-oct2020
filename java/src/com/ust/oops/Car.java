@@ -4,8 +4,8 @@ public class Car extends Vehicle{
 	
 	int enginePower;
 	String color;
-	public Car(int speed, int enginePower, String color) {
-		super(speed);
+	public Car(int speed, int enginePower, String color, Engine engine) {
+		super(speed, engine);
 		this.enginePower = enginePower;
 		this.color = color;
 	}
@@ -21,10 +21,21 @@ public class Car extends Vehicle{
 	public void setColor(String color) {
 		this.color = color;
 	}
+	
+	
 	@Override
 	public String toString() {
-		return "Car [enginePower=" + enginePower + ", color=" + color + ", speed=" + getSpeed() + "]";
+		return "Car [enginePower=" + enginePower + ", color=" + color + ", speed=" + speed + ", engine=" + engine + "]";
 	}
+//	@Override
+//	public void start() {
+//		// start car engine
+//		System.out.println(this.engine);
+//		
+//		// print car properties
+//		System.out.println(this);
+//		
+//	}
 	
 	
 
