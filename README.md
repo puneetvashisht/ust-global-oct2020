@@ -79,6 +79,8 @@
             a. Code Reuse
             b. Polymorphism
         2. Polymorphism
+        3. Abstraction
+        4. Encapsulation
     Casting 
         Upcasting is default, downcast is explicitly needed
         a. Primitives
@@ -86,9 +88,11 @@
 
     LSP - Liskov's Substitution Principle
     Car is a Vehicle
-    Department is an Employee
     Manager is a Employee
     3D is a 2D --  (favour composition over inheritance)
+
+      Department has an Employee
+    Employee has a Address
 
     Bicycle (maxSpeed) -> RoadBicyle (speedUp-> speed +2 ) & MountainBycle (speedUp-> speed +1)
 
