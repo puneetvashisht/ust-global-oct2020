@@ -2,7 +2,7 @@ package com.ust.colldemo;
 
 import java.util.ArrayList;
 
-class Fruit extends Object {
+class Fruit extends Object implements Comparable<Fruit> {
 	String name;
 
 	public Fruit(String name) {
@@ -13,12 +13,23 @@ class Fruit extends Object {
 	@Override
 	public boolean equals(Object obj) {
 		Fruit f = (Fruit) obj;
-		return this.name.equals(f.name);
+		return f.name.equals(this.name);
 	}
+	
+	@Override
+	public int hashCode() {
+		return this.name.hashCode();
+	}
+	
 
 	@Override
 	public String toString() {
 		return "Fruit [name=" + name + "]";
+	}
+
+	@Override
+	public int compareTo(Fruit o) {
+		return o.name.compareTo(this.name);
 	}
 
 }

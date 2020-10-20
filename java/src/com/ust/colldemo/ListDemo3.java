@@ -1,6 +1,7 @@
 package com.ust.colldemo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -22,6 +23,8 @@ public class ListDemo3 {
 		boolean result = employees.contains(new Employee(23, "Priya", 50000.00));
 		
 		System.out.println(employees);
+		
+//		Arrays.sort(a);
 		
 //		Collections.sort(employees);
 		Collections.sort(employees, new SalaryComparator());
