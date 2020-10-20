@@ -44,5 +44,10 @@
             - FormGroups -> FormControl in both template and ts
             - Validators or custom validations
         - Template-Driven
+            - simple scenarios
     Angular Material 
         - Already built in components
+    Asynchronous functionalities
+        - Callback: flaw that caller has to share his function
+        - Promises: Better and do not require and sharing of function
+        - Observable

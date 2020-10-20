@@ -22,18 +22,18 @@ export class TodoService {
   }
 
   fetchAllTodos(){
-    // return this.httpClient.get(baseUrl)
+    return this.httpClient.get(baseUrl).toPromise();
    
     //create our own observable
 
-    let observable= Observable.create(observer => {
-      let todoArray = JSON.parse(localStorage.getItem('mytodo')) || []
-        observer.next(todoArray);
-        console.log("am done");
-        observer.complete(); // to show we are done with our processing
+    // let observable= Observable.create(observer => {
+    //   let todoArray = JSON.parse(localStorage.getItem('mytodo')) || []
+    //     observer.next(todoArray);
+    //     console.log("am done");
+    //     observer.complete(); // to show we are done with our processing
      
-    });
-    return observable;
+    // });
+    // return observable;
   }
 
 
