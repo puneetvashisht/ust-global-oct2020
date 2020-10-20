@@ -27,7 +27,7 @@
     {
       "id": "23",
       "name": "Saranya",
-      "salary": "232433"
+      "salary": 23433
     }
   ],
   "posts": [
@@ -35,6 +35,11 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "Angular build process",
+      "author": "puneet"
     }
   ],
   "comments": [
@@ -42,6 +47,16 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "id": 3,
+      "body": "Angular involves transcompilation and not compilation",
+      "postId": "2"
+    },
+    {
+      "id": 4,
+      "body": "Angular also should take care of minification",
+      "postId": "2"
     }
   ],
   "profile": {

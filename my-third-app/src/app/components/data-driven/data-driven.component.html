@@ -1,6 +1,6 @@
 <form [formGroup]="signUpForm" (submit)="onSignup()">
     <mat-form-field>
-      <input matInput  formControlName="email"  type="email" placeholder="E-Mail*">
+      <input matInput color="primary"  formControlName="email"  type="email" placeholder="E-Mail*">
       <mat-error *ngIf="signUpForm.get('email').invalid">Please enter a valid email.</mat-error>
     </mat-form-field>
     <mat-form-field>

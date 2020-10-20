@@ -2,3 +2,14 @@
 <input type="text" [(ngModel)]="favoriteColor" name="favoriteColor" required pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
 <button type="submit" [disabled]="!f.valid">Submit</button>
 </form>
+
+<p *ngIf="true">
+    Expression is true and ngIf is true.
+    This paragraph is in the DOM.
+  </p>
+  <p *ngIf="false">
+    Expression is false and ngIf is false.
+    This paragraph is not in the DOM.
+
+  </p>
+ 

@@ -37,6 +37,11 @@ export class ViewTodosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    //Component code 
+
+
+    // Service call
     this.todoService.fetchAllTodos()
     .then((res: Array<Todo>)=> {
       console.log('In promises ', res);

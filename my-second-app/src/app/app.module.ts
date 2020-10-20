@@ -23,15 +23,24 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SearchNamePipe } from './search-name.pipe';
+import { SortSalaryPipe } from './sort-salary.pipe';
+import { SurveyModule } from './survey/survey.module';
 
 const routes: Routes = [
-  // {path:'', component: ViewEmployeesComponent},
-  // {path:'add', component: AddEmployeeComponent},
-  // {path:'courses', component: ViewCoursesComponent},
-  // {path:'details/:id', component: EmployeeDetailsComponent},
-  {path: '', component: ViewTodosComponent},
-  {path: 'add', component: AddTodoComponent},
-  {path:'**', component: NotFoundComponent},
+  { path: '', pathMatch: 'full', redirectTo: '/viewemployee' },
+  {path:'viewemployee', component: ViewEmployeesComponent},
+  {path:'addemployee', component: AddEmployeeComponent},
+  {path:'courses', component: ViewCoursesComponent},
+  {path:'details/:id', component: EmployeeDetailsComponent},
+  {
+    path: 'survey',
+    loadChildren: () => import('./survey/survey.module').then(m => m.SurveyModule)
+  },
+  // {path: '', component: ViewTodosComponent},
+  // {path: 'add', component: AddTodoComponent},
+  // {path:'**', component: NotFoundComponent},
+
 ]
 
 @NgModule({
@@ -48,11 +57,15 @@ const routes: Routes = [
     ViewTodosComponent,
     AddTodoComponent,
     SentenceCasePipe,
-    SearchTextPipe
+    SearchTextPipe,
+    SearchNamePipe,
+    SortSalaryPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    SurveyModule,
+
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
 
@@ -61,7 +74,10 @@ const routes: Routes = [
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule
+
+   
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
