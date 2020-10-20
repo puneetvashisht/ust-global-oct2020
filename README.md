@@ -97,4 +97,13 @@
 
     Bicycle (maxSpeed) -> RoadBicyle (speedUp-> speed +2 ) & MountainBycle (speedUp-> speed +1)
 
-    
+    Garbage Collection
+    Collections 
+    Equals, Sorting (Comparable -- natural criteral,same class & Comparator -- other criterias, different class)
+        List (ArrayList, LinkedList)
+        Set (HashSet(unordered), LinkedHashSet(insertion order), TreeSet(sorted))
+    Hashing - indexing based on hashcode
+    Contract b/w equas() & hashcode() -> Objects which are equal must produce same hashcode, vice-versa is not true.
+
+    Exception Handling -- only concepts
+    String 
