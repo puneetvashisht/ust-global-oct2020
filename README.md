@@ -107,3 +107,36 @@
 
     Exception Handling -- only concepts
     String 
+
+
+
+    SBA
+
+    Employee class contains following fields : id, firstName, lastName, age, salary 
+    
+    1. Create a printEmployees method that can
+    - Print all employees
+    - Print employees with firstName starting with letter 'R'
+    - Print employees with lastName starting with letter 'C'
+    - Print the employee with minimum salary
+    - Print the sum of all salaries of the employees
+    - Print the average of salaries of employees
+    - Print sorted list of employees with salaries (both ascending and descending)
+    The method returns EmployeeNotFound exception whereever the result is empty.
+
+
+    2. Extend the employee to create Regular & Contract Employees
+        Implement incrementSalary() to increase salary by 5% of current salary for Regular Employees & Rs 5000/- fixed for contractual Employees
+    
+    3. Create a Nested collections representing a cached objects
+
+    Map<String bankName, Bank bank>   - Bank (bankId, bankName, List<Branch> branches, List<Atm> atms)
+    Branch (branchId, branchName, Address address, Atm atm)
+    Atm (atmID, Address address)
+    Address (addressId, location, city, pincode)
+
+    findAllAtmAndBranches(String bank, String location)
+    findAllAtmAndBranches(String bank, int pincode)
+
+
+
