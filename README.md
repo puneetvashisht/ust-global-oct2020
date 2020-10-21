@@ -96,4 +96,27 @@
 
     Bicycle (maxSpeed) -> RoadBicyle (speedUp-> speed +2 ) & MountainBycle (speedUp-> speed +1)
 
+
+    Collections
+        Lists, Sets, Maps
+        equals, hashcode
+        Comparable & Comparator
+        Generics
+        1.5 features
+    
+    JDBC
+    Threads --> Concurrency
+    I/0
+    SBA -- Wednesday
+
+    Java1.8
+        Lamda
+        Predicates, Consumers
+        Date Time
+        Nashorn
+        Optional
+    OOAD
+
+
+
     
