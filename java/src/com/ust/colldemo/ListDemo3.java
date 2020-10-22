@@ -3,6 +3,7 @@ package com.ust.colldemo;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 
@@ -27,7 +28,18 @@ public class ListDemo3 {
 //		Arrays.sort(a);
 		
 //		Collections.sort(employees);
-		Collections.sort(employees, new SalaryComparator());
+//		Collections.sort(employees, new SalaryComparator());
+	
+		// lamdas functional programs - just pass functions as method arguments
+		Collections.sort(employees, ( o1,  o2)-> o1.name.compareTo(o2.name));
+		
+		Collections.sort(employees , new Comparator<Employee>(){
+			@Override
+			public int compare(Employee o1, Employee o2) {	
+				return o1.name.compareTo(o2.name);
+			}	
+		});
+		
 		
 		System.out.println(employees);
 	}
