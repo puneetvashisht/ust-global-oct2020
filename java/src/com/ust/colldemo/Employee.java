@@ -2,10 +2,10 @@ package com.ust.colldemo;
 
 public class Employee implements Comparable<Employee>{
 	
-	int id;
-	String name;
-	Double salary;
-	Address address;
+	public int id;
+	public String name;
+	public Double salary;
+	public Address address;
 	
 
 	@Override

@@ -1,7 +1,12 @@
-package com.ust.colldemo;
+package com.demo.java8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiPredicate;
+import java.util.function.Predicate;
+
+import com.ust.colldemo.Address;
+import com.ust.colldemo.Employee;
 
 public class SbaDemo {
 
@@ -24,20 +29,26 @@ public class SbaDemo {
 //			return e.name.startsWith("R");
 //		};
 		
+		BiPredicate<Employee, Address> bp = (e, a)-> true;
+		
 //		printEmployees(employees, new NameStartWithRCondition());
 		
-		printEmployees(employees, (e) ->  e.name.startsWith("R"));
+		printEmployeesWithPredicate(employees, (e) ->  e.name.startsWith("R"));
 //		printEmployees(employees, new IdLessThan10Condition());
-		printEmployees(employees, (e) ->  e.id < 10);
+		printEmployeesWithPredicate(employees, (e) ->  e.id < 10);
 
 	}
 
-	public static void printEmployees(List<Employee> employees, Condition condition) {
-//		System.out.println(employees);
-		for (Employee e : employees) {
-//			if(e.getName().startsWith("R")) {
+//	public static void printEmployees(List<Employee> employees, Condition condition) {
+//		for (Employee e : employees) {
+//			if (condition.test(e)) {
 //				System.out.println(e);
 //			}
+//		}
+//	}
+	
+	public static void printEmployeesWithPredicate(List<Employee> employees, Predicate<Employee> condition) {
+		for (Employee e : employees) {
 			if (condition.test(e)) {
 				System.out.println(e);
 			}
@@ -46,31 +57,9 @@ public class SbaDemo {
 
 }
 
-@FunctionalInterface
-interface Condition {
-	boolean test(Employee e);
-}
+//@FunctionalInterface
+//interface Condition {
+//	boolean test(Employee e);
+//}
 
-class NameStartWithRCondition implements Condition {
 
-	@Override
-	public boolean test(Employee e) {
-		if (e.getName().startsWith("R")) {
-			return true;
-		}
-		return false;
-	}
-
-}
-
-class IdLessThan10Condition implements Condition {
-
-	@Override
-	public boolean test(Employee e) {
-		if (e.id < 10) {
-			return true;
-		}
-		return false;
-	}
-
-}
