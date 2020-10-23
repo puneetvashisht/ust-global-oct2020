@@ -26,7 +26,7 @@ public class DataExtractor {
 		Book b7 = new Book(9780596009207L, "Java 7", 4.9, 40.0, "Amazon");
 		Book b8 = new Book(9780596009208L, "Java 8", 4.7, 50.0, "Amazon");
 		Book b9 = new Book(9780596009209L, "Java 9", 4.3, 50.0, "Amazon");
-		Book b10 = new Book(9780596009210L, "Java 10", 4.5, 60.0, "Amazon");
+		Book b10 = new Book(9780596009210L, "Angular 10", 4.5, 60.0, "Amazon");
 		
 		return Arrays.asList(b1, b2, b3, b4, b5, b6, b7, b7, b8, b9, b10);
 	}

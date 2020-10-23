@@ -2,10 +2,13 @@ package com.demo.java8;
 
 
 import java.util.ArrayList;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
+import java.util.Map;
+import java.util.OptionalDouble;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class StreamsDemo {
 	static class Book implements Comparable<Book>{		
@@ -119,9 +122,85 @@ public class StreamsDemo {
 //		.count();
 //		System.out.println(countWithStreams);
 		
-
 		
-			
+		
+		
+
+		boolean anyMatch = books.stream()
+		.anyMatch((b)-> b.rating>5.8 && b.price < 50);
+		
+		System.out.println(anyMatch);
+		
+		boolean allMatch = books.stream()
+				.allMatch((b)-> b.rating>1.8);
+				
+				System.out.println(allMatch);
+		
+//		System.out.println(IntStream.of(14 ,3 ,56, 5665).max());	
+//		
+//		Stream<Integer> inifiteStream = Stream.iterate(2,  i-> i *2);
+//		inifiteStream.limit(10).forEach(System.out:: println);
+		
+		
+		OptionalDouble value = books.parallelStream()
+//		.filter((b)-> b.rating > 3.8)
+		.distinct()
+		.mapToDouble(Book::getRating)
+		.average();
+		
+		System.out.println(value.getAsDouble());
+//		.forEach(System.out::println);
+		
+		
+		Set<Book> filteredBooks = books.stream()
+		 .filter((b)-> b.rating > 4.8)
+		.collect(Collectors.toCollection(TreeSet::new));
+//		.forEach(System.out::println);
+		
+		System.out.println(filteredBooks);
+		
+		// Joining
+		String bookNames = books.stream()
+		.filter((b)-> b.rating > 4.8)
+		.map((b)->b.title)
+		.collect(Collectors.joining(", "));
+//		.forEach(System.out::println);
+		
+		
+		//Partitioning
+		
+		Map<Boolean, List<Book>> partitionedBookMap = books.stream()
+		.collect(Collectors.partitioningBy((b)-> b.rating> 4.0 ));
+		
+		System.out.println(partitionedBookMap.get(true));
+		System.out.println(partitionedBookMap.get(false));
+		
+		
+		//Grouping
+		
+		
+		Map<Character, List<Book>> groupedBookMap = books.stream()
+		.collect(Collectors.groupingBy(b -> new Character(b.title.charAt(0))));	
+//			
+//				System.out.println(groupedBookMap.get(new Character("A")));
+		
+		//Summarizing
+		
+		DoubleSummaryStatistics stats = books.stream()
+		.collect(Collectors.summarizingDouble(Book::getPrice));
+//		stats.
+		
+		System.out.println(stats);
+		// Reduce, Map, MapToInt
+		
+		Double totalPrice = books.stream()
+		.map(Book::getPrice)
+		.reduce(0.0, Double::sum);
+//		.forEach(System.out::println);
+		
+		System.out.println(totalPrice);
+		
+		
 		
 		
 	}
