@@ -142,7 +142,7 @@ public class StreamsDemo {
 //		inifiteStream.limit(10).forEach(System.out:: println);
 		
 		
-		OptionalDouble value = books.parallelStream()
+		OptionalDouble value = books.stream()
 //		.filter((b)-> b.rating > 3.8)
 		.distinct()
 		.mapToDouble(Book::getRating)
