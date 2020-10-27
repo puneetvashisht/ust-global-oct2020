@@ -22,4 +22,13 @@ public class PaymentComponent {
 		System.out.println("execute in component");
 	}
 
+
+	public boolean transferFunds(int account1, int account2, double amount) {
+		if(amount< 0) {
+			throw new RuntimeException("Amount not valid!!");
+		}
+		paymentService.execute();
+		return true;
+	}
+
 }
