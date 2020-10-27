@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+ http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+ http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	
+	<context:component-scan base-package="springdemo.ust"></context:component-scan>
+	
+	<bean id="b" class="springdemo.B"></bean>
+	<bean id="c" class="springdemo.C"></bean>
+	
+	<bean id="a" class="springdemo.A">
+		<constructor-arg ref="b" name="b"> </constructor-arg>
+		<constructor-arg ref="c" name="c"> </constructor-arg>
+	</bean>
+	
+	<!-- <bean id="paymentService" class="springdemo.PaymentService"></bean>
+	
+	<bean id="paymentComponent" class="springdemo.PaymentComponent">
+		<constructor-arg ref="paymentService" name="paymentService"> </constructor-arg>
+	</bean> -->
+	
+	
+	
+
+	
+</beans>

@@ -140,3 +140,10 @@
 
 
 
+    Spring
+        - Use spring to create dependencies for us
+        - create a maven project with deps - core,  context
+        - beans.xml config file: configure Dependency Injection
+
+
+
