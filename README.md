@@ -105,7 +105,7 @@
     Hashing - indexing based on hashcode
     Contract b/w equas() & hashcode() -> Objects which are equal must produce same hashcode, vice-versa is not true.
 
-    Exception Handling -- only concepts
+    Exception Handling
     String 
 
 
@@ -137,6 +137,23 @@
 
     findAllAtmAndBranches(String bank, String location)
     findAllAtmAndBranches(String bank, int pincode)
+
+
+    Java 8
+        Functional Interfaces
+        Lamdas
+        Pedicates, Consumer, BiConsumers, Suppliers..... Java 8 FI
+        Stream - Declarative style of programming
+        Parallel Streams
+        Collectors - Joining, Partitioning, Grouping, Summarizing
+        Method, Constructor References
+        Optional - Wrapper avoiding NullPointerExceptions
+        Date Time API
+            Local Date Time
+            Zone Date Time
+            Insant
+    OOAD
+
 
 
 
