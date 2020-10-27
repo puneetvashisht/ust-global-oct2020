@@ -115,8 +115,10 @@ public class StreamsDemo {
 		books.parallelStream()
 		.filter((b)-> b.rating > 4.8)
 		.distinct()
-		.map(b -> b.price)
-		.map(Math::round)
+		.map(b -> {
+			return b.title;
+		})
+//		.map(Math::round)
 //		.map((b) -> Math.round(b.rating))
 		.forEach(System.out::println);
 //		.count();

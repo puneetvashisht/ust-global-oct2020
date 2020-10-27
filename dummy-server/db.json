@@ -28,6 +28,21 @@
       "id": "23",
       "name": "Saranya",
       "salary": 23433
+    },
+    {
+      "name": "Ravi",
+      "salary": 34343.33,
+      "id": "-C3KHUP"
+    },
+    {
+      "name": "json-server",
+      "salary": "34656",
+      "id": "KG5YQmU"
+    },
+    {
+      "name": "test",
+      "salary": "3456",
+      "id": "LqlW3YO"
     }
   ],
   "posts": [
