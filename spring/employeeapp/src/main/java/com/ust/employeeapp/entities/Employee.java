@@ -1,13 +1,20 @@
 package com.ust.employeeapp.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
 
-
+@Entity
 public class Employee implements Comparable<Employee> {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	public int id;
 	public String name;
 	public Double salary;
-	public Address address;
+
 
 	@Override
 	public int hashCode() {
@@ -42,10 +49,7 @@ public class Employee implements Comparable<Employee> {
 		this.salary = salary;
 	}
 
-	public Employee(int id, String name, double salary, Address address) {
-		this(id, name, salary);
-		this.address = address;
-	}
+
 
 	public int getId() {
 		return id;
@@ -81,7 +85,7 @@ public class Employee implements Comparable<Employee> {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary  + "]";
 	}
 
 	// @Override
