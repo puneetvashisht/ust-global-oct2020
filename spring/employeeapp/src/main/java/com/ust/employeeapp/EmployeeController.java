@@ -6,19 +6,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ust.employeeapp.entities.Employee;
 import com.ust.employeeapp.services.EmployeeService;
 
 @RestController
+//@Controller
+@CrossOrigin("*")
 @RequestMapping("/api/employees")
 public class EmployeeController {
 	
@@ -28,7 +32,7 @@ public class EmployeeController {
 	
 	@GetMapping("/hello")
 	public String hello(){
-		return "hello world from rest controller";
+		return "hello.jsp";
 	}
 	
 	@GetMapping("/{id}")
@@ -52,6 +56,8 @@ public class EmployeeController {
 	}
 //	@DeleteMapping("/employees/{id}")
 	@RequestMapping(path="/{id}", method=RequestMethod.DELETE)
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	@ExceptionHandler({EmptyResultDataAccessException.class})
 	public ResponseEntity<String> deleteEmployee(@PathVariable("id") int id){
 		
 		ResponseEntity<String> re = null;
@@ -60,9 +66,9 @@ public class EmployeeController {
 			re = ResponseEntity.ok().body("employee has been deleted successfully.");
 		}
 		catch(EmptyResultDataAccessException e){
-			re = new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//			re = new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
-		
+//		
 		return re;
 	}
 	
