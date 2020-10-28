@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,8 +24,12 @@ public class EmployeeController {
 		return "hello world from rest controller";
 	}
 	
-	@GetMapping("/employee")
-	public Employee fetchEmployee(){
+	@GetMapping("/employees/{id}")
+	public Employee fetchEmployee(@PathVariable("id")int id){
+		System.out.println("In Fetch employee: " + id);
+		//service to fetch Employee by id
+		//return that employeee
+		
 		Employee input = new Employee(23, "Vaishali", 34343.34);
 		return input;
 	}
