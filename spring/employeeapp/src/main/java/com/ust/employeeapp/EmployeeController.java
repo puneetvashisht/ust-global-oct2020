@@ -28,6 +28,10 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 	
+	@GetMapping("/totalsalary")
+	public Double fetchTotalSalaries(){
+		return employeeService.fetchTotalSalary();
+	}
 
 	
 	@GetMapping("/{id}")

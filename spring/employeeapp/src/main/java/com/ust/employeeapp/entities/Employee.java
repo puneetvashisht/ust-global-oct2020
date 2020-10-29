@@ -1,5 +1,6 @@
 package com.ust.employeeapp.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,7 @@ public class Employee implements Comparable<Employee> {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public int id;
+
 	public String name;
 	public Double salary;
 

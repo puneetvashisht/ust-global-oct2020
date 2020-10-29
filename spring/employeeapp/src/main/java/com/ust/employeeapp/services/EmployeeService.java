@@ -56,6 +56,10 @@ public class EmployeeService {
 		}
 		return true;
 	}
+
+	public Double fetchTotalSalary() {
+		return employeeRepository.findTotalSalary();
+	}
 	
 
 }
