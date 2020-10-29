@@ -161,6 +161,26 @@
         - Use spring to create dependencies for us
         - create a maven project with deps - core,  context
         - beans.xml config file: configure Dependency Injection
+        - Annotations
+        - Bean Configuration
+        - Lifecyle - Initialization, Use, Destroy
+        - Spring Boot
+        - Spring REST - error handling, status code, content-negotiation(xml/json)
+        - Spring - Angular integration
+        - Spring Hibernate, Spring MVC -- require complex configuration
+        - Spring JPA
+            - ORM -> Provide a mapping from object to table
+            - JPA (facade) -- Hibernate
+            - Entities, @Id
+            - Composite ID- Embeddable
+            - Inheritance Strategies
+                - Single Table
+                - Table Per Class
+                - Joined
+            - Composition
+                - OneToOne
+                - OneToMany
+
 
 
 

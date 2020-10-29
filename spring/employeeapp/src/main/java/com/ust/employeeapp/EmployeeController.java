@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ust.employeeapp.entities.Address;
 import com.ust.employeeapp.entities.Employee;
 import com.ust.employeeapp.services.EmployeeService;
 
@@ -78,11 +79,20 @@ public class EmployeeController {
 	
 	@PostMapping("/")
 	public ResponseEntity<Void> addEmployee(@RequestBody Employee employee){
+		System.out.println(employee);
 		if(employeeService.findByName(employee.name)){
 			return new ResponseEntity<>(HttpStatus.CONFLICT);
 		}
 		
 		 employeeService.addEmployee(employee);
+		 return new ResponseEntity<>(HttpStatus.CREATED);
+	}
+	
+	@PostMapping("/address")
+	public ResponseEntity<Void> addEmployee(@RequestBody Address address){
+		System.out.println(address);
+		
+		 employeeService.addAddress(address);
 		 return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 

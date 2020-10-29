@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ust.employeeapp.entities.Address;
 import com.ust.employeeapp.entities.Employee;
 
 
@@ -17,6 +18,9 @@ public class EmployeeService {
 	@Autowired
 //	EmployeeRepository employeeRepository;
 	EmployeeJpaRepo employeeRepository;
+	
+	@Autowired
+	AddressJpaRepo addressRepository;
 
 	public List<Employee> fetchAllEmployees() {
 		// get list of data from storage
@@ -59,6 +63,11 @@ public class EmployeeService {
 
 	public Double fetchTotalSalary() {
 		return employeeRepository.findTotalSalary();
+	}
+
+	public void addAddress(Address address) {
+		// TODO Auto-generated method stub
+		addressRepository.save(address);
 	}
 	
 
