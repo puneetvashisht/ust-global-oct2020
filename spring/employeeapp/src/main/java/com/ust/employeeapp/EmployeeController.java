@@ -21,7 +21,6 @@ import com.ust.employeeapp.entities.Employee;
 import com.ust.employeeapp.services.EmployeeService;
 
 @RestController
-//@Controller
 @CrossOrigin("*")
 @RequestMapping("/api/employees")
 public class EmployeeController {
@@ -29,11 +28,7 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 	
-	
-	@GetMapping("/hello")
-	public String hello(){
-		return "hello.jsp";
-	}
+
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Employee> fetchEmployee(@PathVariable("id")int id){
