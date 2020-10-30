@@ -180,6 +180,33 @@
             - Composition
                 - OneToOne
                 - OneToMany
+            - Bidirectional
+            - Lazy Fetch
+            - Life cycle
+            - Criteria API
+            - Transactions
+            
+            - Optimistic Locks
+            - Caching 
+        - MongoDB and port application
+
+
+        SBA 3 -----
+
+
+        Create a Spring REST backend for Employee & Course entities. Employee can register to multiple course and so have a one to many relationship with courses.
+        The RESTful backend should suppport following operations
+        1. CRUD method on Employee
+        2. Enroll & Unenroll an Employee to one or more courses. Date and Time of enrollment should also be captured.
+        3. List all the courses a employee is enrolled to.
+        4. Soft-delete an employee i.e. don't delete from db, just move to a different table.
+
+
+        5. No implementation required - just explain what will it take to list all the Employees enrolled in a course
+
+        * Make proper use of Exception Handling, Status Codes & URL's.
+
+
 
 
 

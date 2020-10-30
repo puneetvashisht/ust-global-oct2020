@@ -89,8 +89,9 @@ public class EmployeeController {
 	}
 	
 	@PostMapping("/address")
-	public ResponseEntity<Void> addEmployee(@RequestBody Address address){
+	public ResponseEntity<Void> addAddress(@RequestBody Address address){
 		System.out.println(address);
+//		address.setEmployee(employee)
 		
 		 employeeService.addAddress(address);
 		 return new ResponseEntity<>(HttpStatus.CREATED);

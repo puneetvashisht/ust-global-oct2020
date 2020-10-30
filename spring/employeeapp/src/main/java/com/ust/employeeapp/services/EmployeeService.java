@@ -54,6 +54,7 @@ public class EmployeeService {
 
 	public boolean findByName(String name) {
 		Employee emp = employeeRepository.findByName(name);
+//		emp.getAddresses();
 		System.out.println(emp);
 		if(emp==null){
 			return false;
