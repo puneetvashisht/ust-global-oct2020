@@ -73,15 +73,15 @@ public class EmployeeController {
 	}
 	
 	@GetMapping("/")
-	public List<Employee> fetchAllEmployee(){
+	public List<com.ust.employeeapp.mongo.entities.Employee> fetchAllEmployee(){
 		return employeeService.fetchAllEmployees();
 	}
 	
 	@PostMapping("/")
-	public ResponseEntity<Void> addEmployee(@RequestBody Employee employee){
-		if(employeeService.findByName(employee.name)){
-			return new ResponseEntity<>(HttpStatus.CONFLICT);
-		}
+	public ResponseEntity<Void> addEmployee(@RequestBody com.ust.employeeapp.mongo.entities.Employee employee){
+//		if(employeeService.findByName(employee.name)){
+//			return new ResponseEntity<>(HttpStatus.CONFLICT);
+//		}
 		
 		 employeeService.addEmployee(employee);
 		 return new ResponseEntity<>(HttpStatus.CREATED);

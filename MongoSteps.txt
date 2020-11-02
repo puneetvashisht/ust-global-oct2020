@@ -1,0 +1,14 @@
+1. MongoDB Setup
+    - executable installtion
+    - mongod --dbpath <<directory>>
+2. Difference wrt relational database
+    - nosql will not follow a datastructure -- no fixed columns -- document intead of row
+    - tables are collections 
+    https://docs.mongodb.com/manual/reference/sql-comparison/
+    - Robo 3T / MongoDB Compass
+    - Use query methods like db.collection.find({})  instead of queries
+3. How to connect from a spring boot application
+    - Spring Data Mongo dep: spring-boot-starter-data-mongodb
+    - application.properties with mongodb credentials
+    - JPARepository -> MongoRepository
+    - Entities - @Document instead of @Entity, @Id
