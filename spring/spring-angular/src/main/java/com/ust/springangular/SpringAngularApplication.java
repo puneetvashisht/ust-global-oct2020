@@ -1,12 +1,13 @@
-package com.ust.employeeapp;
+package com.ust.springangular;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class EmployeeappApplication {
+@SpringBootApplication
+public class SpringAngularApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeeappApplication.class, args);
+		SpringApplication.run(SpringAngularApplication.class, args);
 	}
 
 }

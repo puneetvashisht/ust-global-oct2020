@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Employee } from './view-employees/Employee';
 
 
-const baseUrl: string = 'http://localhost:8000/api/employees/'
+const baseUrl: string = 'http://localhost:8080/api/employees/'
 
 @Injectable({
   providedIn: 'root'

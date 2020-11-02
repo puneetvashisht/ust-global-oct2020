@@ -180,14 +180,19 @@
             - Composition
                 - OneToOne
                 - OneToMany
-            - Bidirectional
-            - Lazy Fetch
-            - Life cycle
-            - Criteria API
-            - Transactions
-            
-            - Optimistic Locks
-            - Caching 
+                - ManyToOne
+                - ManyToMany
+            - Bidirectional - relationship to be controlled from both side
+            - Lazy Fetch - lazy/eager
+            - Life cycle - Persistent, Transient, Detached
+            - Criteria API - Dynamic queries
+            - Transactions - BMT, Container Manager Trasnsaction
+                BMT - Success tx.commit(); Failure: tx.rollback();
+                @Transaction - Success: No exceptions - Rollback: RuntimeException
+                Control Transactions: propogation REQUIRES, REQUIRES_NEW, NEVER .... 
+            - Optimistic Locks - concurrency issues 
+            - Caching - first level - auto maintained
+            second level - integrate a cache provider like jboss for query caching
         - MongoDB and port application
 
 
@@ -207,7 +212,7 @@
         * Make proper use of Exception Handling, Status Codes & URL's.
 
 
-
+        Spring Boot Application(@CrossOrigin) -- Angular 
 
 
 

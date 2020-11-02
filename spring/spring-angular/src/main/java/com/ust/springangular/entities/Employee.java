@@ -1,4 +1,4 @@
-package com.ust.employeeapp.entities;
+package com.ust.springangular.entities;
 
 import java.util.List;
 
