@@ -161,6 +161,53 @@
         - Use spring to create dependencies for us
         - create a maven project with deps - core,  context
         - beans.xml config file: configure Dependency Injection
+        - Annotations
+        - Bean Configuration
+        - Lifecyle - Initialization, Use, Destroy
+        - Spring Boot
+        - Spring REST - error handling, status code, content-negotiation(xml/json)
+        - Spring - Angular integration
+        - Spring Hibernate, Spring MVC -- require complex configuration
+        - Spring JPA
+            - ORM -> Provide a mapping from object to table
+            - JPA (facade) -- Hibernate
+            - Entities, @Id
+            - Composite ID- Embeddable
+            - Inheritance Strategies
+                - Single Table
+                - Table Per Class
+                - Joined
+            - Composition
+                - OneToOne
+                - OneToMany
+            - Bidirectional
+            - Lazy Fetch
+            - Life cycle
+            - Criteria API
+            - Transactions
+            
+            - Optimistic Locks
+            - Caching 
+        - MongoDB and port application
+
+
+        SBA 3 -----
+
+
+        Create a Spring REST backend for Employee & Course entities. Employee can register to multiple course and so have a one to many relationship with courses.
+        The RESTful backend should suppport following operations
+        1. CRUD method on Employee
+        2. Enroll & Unenroll an Employee to one or more courses. Date and Time of enrollment should also be captured.
+        3. List all the courses a employee is enrolled to.
+        4. Soft-delete an employee i.e. don't delete from db, just move to a different table.
+
+
+        5. No implementation required - just explain what will it take to list all the Employees enrolled in a course
+
+        * Make proper use of Exception Handling, Status Codes & URL's.
+
+
+
 
 
 

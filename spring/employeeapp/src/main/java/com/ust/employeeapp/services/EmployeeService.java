@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ust.employeeapp.entities.Address;
 import com.ust.employeeapp.entities.Employee;
 
 
@@ -55,11 +56,21 @@ public class EmployeeService {
 
 	public boolean findByName(String name) {
 		Employee emp = employeeRepository.findByName(name);
+//		emp.getAddresses();
 		System.out.println(emp);
 		if(emp==null){
 			return false;
 		}
 		return true;
+	}
+
+	public Double fetchTotalSalary() {
+		return employeeRepository.findTotalSalary();
+	}
+
+	public void addAddress(Address address) {
+		// TODO Auto-generated method stub
+		addressRepository.save(address);
 	}
 	
 

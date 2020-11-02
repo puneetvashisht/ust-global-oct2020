@@ -15,7 +15,7 @@ export class AddEmployeeComponent implements OnInit {
 
     // AJAX call to dummmy server
     // this.httpClient.post('http://localhost:3000/employees',{id, name, salary} )
-    this.employeeService.addEmployee({id, name, salary})
+    this.employeeService.addEmployee({id:null, name, salary})
     .subscribe(res=>console.log(res))
 
 

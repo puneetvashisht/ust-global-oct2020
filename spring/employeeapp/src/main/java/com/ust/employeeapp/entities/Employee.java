@@ -1,10 +1,14 @@
 package com.ust.employeeapp.entities;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Employee implements Comparable<Employee> {
@@ -12,8 +16,12 @@ public class Employee implements Comparable<Employee> {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public int id;
+
 	public String name;
 	public Double salary;
+	
+	@OneToMany(mappedBy = "employee", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	public List<Address> addresses;
 
 
 	@Override
@@ -49,7 +57,26 @@ public class Employee implements Comparable<Employee> {
 		this.salary = salary;
 	}
 
+	
+	public Employee(int id, String name, double salary, List<Address> addresses) {
+		this(id, name, salary);
+		this.addresses = addresses;
+	}
 
+
+
+
+	public List<Address> getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
 
 	public int getId() {
 		return id;
@@ -82,10 +109,18 @@ public class Employee implements Comparable<Employee> {
 	public void incrementSalary(int newSalary) {
 		this.salary += newSalary;
 	}
+	
+	
+	
+
+//	@Override
+//	public String toString() {
+//		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary  + "]";
+//	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary  + "]";
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", address=" + addresses + "]";
 	}
 
 	// @Override

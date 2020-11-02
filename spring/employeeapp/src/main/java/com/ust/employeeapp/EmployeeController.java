@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ust.employeeapp.entities.Address;
 import com.ust.employeeapp.entities.Employee;
 import com.ust.employeeapp.services.EmployeeService;
 
 @RestController
-//@Controller
 @CrossOrigin("*")
 @RequestMapping("/api/employees")
 public class EmployeeController {
@@ -29,11 +29,11 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 	
-	
-	@GetMapping("/hello")
-	public String hello(){
-		return "hello.jsp";
+	@GetMapping("/totalsalary")
+	public Double fetchTotalSalaries(){
+		return employeeService.fetchTotalSalary();
 	}
+
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Employee> fetchEmployee(@PathVariable("id")int id){
@@ -84,6 +84,15 @@ public class EmployeeController {
 //		}
 		
 		 employeeService.addEmployee(employee);
+		 return new ResponseEntity<>(HttpStatus.CREATED);
+	}
+	
+	@PostMapping("/address")
+	public ResponseEntity<Void> addAddress(@RequestBody Address address){
+		System.out.println(address);
+//		address.setEmployee(employee)
+		
+		 employeeService.addAddress(address);
 		 return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 
