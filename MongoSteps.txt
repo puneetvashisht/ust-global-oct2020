@@ -12,3 +12,4 @@
     - application.properties with mongodb credentials
     - JPARepository -> MongoRepository
     - Entities - @Document instead of @Entity, @Id
+5.
